@@ -6,7 +6,7 @@ function Header (){
 
         <div>
             <h1>
-                Robot Fiends
+                Robot Friends
             </h1>
         </div>
     );
