@@ -1,0 +1,8 @@
+.Hyp{
+    text-decoration: none;
+    color: red;
+}
+
+.Hyp:hover {
+    color: hotpink;
+  }
