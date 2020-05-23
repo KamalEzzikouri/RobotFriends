@@ -8,6 +8,8 @@ import Scroll from '../Component/Scroll/Scroll'
 
 // import { robots } from './Component/robots'
 
+// Title Of The App
+const TITLE = 'Robot Friends'
 
 class App extends Component {
 
@@ -25,9 +27,13 @@ class App extends Component {
         .then(response => response.json())
             .then(users => this.setState({robots: users}))
 
+            /* Title of The App you can change it from above */
+
+            document.title = `${ TITLE }`;
     }
 
     onsearchchange = (event) => {
+        
         this.setState({searchfield: event.target.value})
     }
 
@@ -39,15 +45,20 @@ class App extends Component {
 
         return(
 
-            <div className='tc'>
+            <div>
+                {/* <Helmet>
+                    <title>{ TITLE }</title>
+                </Helmet> */}
                 <Header />
-                <SearchBox searchchange={this.onsearchchange}/>
+                <div className='tc'>
+                    <SearchBox searchchange={this.onsearchchange}/>
 
-                <Scroll>
-                    
-                <CardList  robots = {filterrebots}/>
+                    <Scroll>
+                        
+                    <CardList  robots = {filterrebots}/>
 
-                </Scroll>
+                    </Scroll>
+                </div>
             </div>
     
         );
