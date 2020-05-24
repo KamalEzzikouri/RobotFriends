@@ -12,7 +12,6 @@ import { setSearchField, requestRobots } from '../Actions/Actions';
 // Title Of The App
 const TITLE = 'Robot Friends'
 
-
 /// maps
 
 const mapStateToProps = (state) =>{
