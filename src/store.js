@@ -1,15 +1,18 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 
 import Thunk from 'redux-thunk';
 
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-import { searchRobots } from './reducers/reducers';
+import { searchRobots, requestRobots } from './reducers/reducers';
+
+
+const rootreducer = combineReducers({ searchRobots, requestRobots });
 
 const middleware = [Thunk]
 
 const store = createStore(
-    searchRobots, 
+    rootreducer, 
     composeWithDevTools(applyMiddleware(...middleware))
     
     )

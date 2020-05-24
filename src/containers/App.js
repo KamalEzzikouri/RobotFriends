@@ -7,7 +7,7 @@ import SearchBox from '../Component/Search/SearchBox';
 
 import Scroll from '../Component/Scroll/Scroll'
 
-import { setSearchField } from '../Actions/Actions';
+import { setSearchField, requestRobots } from '../Actions/Actions';
 
 // Title Of The App
 const TITLE = 'Robot Friends'
@@ -17,32 +17,26 @@ const TITLE = 'Robot Friends'
 
 const mapStateToProps = (state) =>{
         return {
-            searchField: state.searchField
+            searchField: state.searchRobots.searchField,
+            robots: state.requestRobots.robots,
+            isPending: state.requestRobots.isPending,
+            error: state.requestRobots.error
         }
 }
 
 const mapDispatchToProps = (dispatch) =>{
 
         return {
-            onsearchchange: (event) => dispatch(setSearchField(event.target.value))
+            onsearchchange: (event) => dispatch(setSearchField(event.target.value)),
+            onRequestRobots: () => dispatch(requestRobots())
         }
 }
 
 class App extends Component {
 
-    constructor(){
-        super()
-        this.state = {
-            robots: []
-            // searchfield: ''
-        }
-    }
-
     componentDidMount(){
 
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-            .then(users => this.setState({robots: users}))
+        this.props.onRequestRobots();
 
             /* Title of The App you can change it from above */
 
@@ -57,14 +51,15 @@ class App extends Component {
 
     render(){
 
-        const { robots } = this.state;
-        const { searchField, onsearchchange } = this.props;
+        const { searchField, onsearchchange, robots, isPending } = this.props;
         const filterrebots = robots.filter(robot =>{
             return robot.name.toLowerCase().includes(searchField.toLowerCase())
         })
 
-        return(
-
+        return isPending ? 
+        
+        <h1> Loading ..... </h1> :
+        (
             <div>
                 {/* <Helmet>
                     <title>{ TITLE }</title>
