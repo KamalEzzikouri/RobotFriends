@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/RobotFriends/static/css/main.8c344795.chunk.css",
+    "main.js": "/RobotFriends/static/js/main.47ee5ad8.chunk.js",
+    "main.js.map": "/RobotFriends/static/js/main.47ee5ad8.chunk.js.map",
+    "runtime-main.js": "/RobotFriends/static/js/runtime-main.dce14eb8.js",
+    "runtime-main.js.map": "/RobotFriends/static/js/runtime-main.dce14eb8.js.map",
+    "static/css/2.3c03f26f.chunk.css": "/RobotFriends/static/css/2.3c03f26f.chunk.css",
+    "static/js/2.3150471e.chunk.js": "/RobotFriends/static/js/2.3150471e.chunk.js",
+    "static/js/2.3150471e.chunk.js.map": "/RobotFriends/static/js/2.3150471e.chunk.js.map",
+    "index.html": "/RobotFriends/index.html",
+    "precache-manifest.5bdc6aabc40fbe208789f2718ecc74dd.js": "/RobotFriends/precache-manifest.5bdc6aabc40fbe208789f2718ecc74dd.js",
+    "service-worker.js": "/RobotFriends/service-worker.js",
+    "static/css/2.3c03f26f.chunk.css.map": "/RobotFriends/static/css/2.3c03f26f.chunk.css.map",
+    "static/css/main.8c344795.chunk.css.map": "/RobotFriends/static/css/main.8c344795.chunk.css.map",
+    "static/js/2.3150471e.chunk.js.LICENSE.txt": "/RobotFriends/static/js/2.3150471e.chunk.js.LICENSE.txt",
+    "static/media/header.css": "/RobotFriends/static/media/SEGA.12a3db8b.woff",
+    "static/media/robot.svg": "/RobotFriends/static/media/robot.09e21f4d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dce14eb8.js",
+    "static/css/2.3c03f26f.chunk.css",
+    "static/js/2.3150471e.chunk.js",
+    "static/css/main.8c344795.chunk.css",
+    "static/js/main.47ee5ad8.chunk.js"
+  ]
+}
